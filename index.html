@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <div class="container">
+        <h1>Cadastro de Aluno</h1>
+        <form action="#" method="post" id="cadAluno">
+
+            <!-- Para o nome -->
+            <label for="nameAluno"> Nome completo:</label>
+            <input type="text" id="nameAluno" name="nameAluno" placeholder="Digite seu nome completo" required>
+            
+             <!-- Para a data de nascimento -->
+            <label for="datNasc"> Data de Nascimento:</label>
+            <input type="date" id="datNasc" name="datNasc" required><br><br>
+         
+             <!-- Para o CPF-->
+            <label for="cpfAluno"> CPF:</label>
+            <input type="text" id="cpfAluno" name="cpfAluno" placeholder="000.000.000-00" required>
+            
+              <!-- Para o Endereço-->
+            <label for="enderecoAluno">Endereço:</label>
+            <input type="text" id="enderecoAluno" name="enderecoAluno" placeholder="Digite seu endereço" required>
+            
+              <!-- Para o Telefone-->
+            <label for="telAluno">Telefone:</label>
+            <input type="tel" id="telAluno" name="telAluno" placeholder="(XX) 0000-0000" required>
+
+            <!-- Para o E-mail-->
+              <label for="emailAluno">E-mail:</label>
+              <input type="email" id="emailcoAluno" name="emailAluno" placeholder="exemplo@email.com" required>
+
+             <!-- Para a série-->
+             <label for="serieAluno">Série / Turma:</label>
+             <select id="serieAluno" name="serieAluno" required>
+                 <option value="">Selecione uma série/turma</option>    
+                 <option value="primeiro">Primeiro Ano</option> 
+                 <option value="segundo">Segundo Ano</option> 
+                 <option value="terceiro">Terceiro Ano</option>
+             </select>
+
+         <!-- Responsável-->
+            <label for="respAluno">Nome do Responsável: </label>
+            <input type="text" id="respAluno" name="respcoAluno" placeholder="Digite o nome do seu responsável" required>
+                 
+        <!-- Botão de envio -->
+        
+        <button type="submit">Enviar Cadastro</button>
+
+        </form>
+
+    </div>
+</main>
+<footer>
+    Criado por Juliana N. Santos
+</footer>
+
+</body>
+</html>
