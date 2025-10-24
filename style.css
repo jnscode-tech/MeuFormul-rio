@@ -81,20 +81,7 @@
     font-size: 0.9rem;
     width: 100%;
   }
-  🧩 O que foi corrigido
-  O <footer> foi movido para fora do <main>.
-  
-  O body agora usa flex-direction: column para posicionar o rodapé corretamente.
-  
-  main ganhou flex: 1 para empurrar o footer para o fim da página.
-  
-  Corrigido um erro no seletor CSS (input [type="date"] → input[type="date"]).
-  
-  Corrigido o label do e-mail (estava repetindo “Endereço”).
-  
-  Corrigido os valores duplicados no <select>.
-  
-  Quer que o footer fique sempre fixo na parte de baixo da tela (mesmo quando rola a página)? Posso te mandar essa variação também.
+
   
   
   
