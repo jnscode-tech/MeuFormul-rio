@@ -4,14 +4,32 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #7a6ac4, #9a80c4);
-    color: #333;
-    display: flex;
-    flex-direction: column; /* importante! coloca o footer abaixo */
-    min-height: 100vh;
-  }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #7a6ac4, #9a80c4);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative; /* necessário */
+  overflow: hidden; /* evita rolagem indesejada */
+}
+
+/*  O uso do body:: before permite manter o texto e elementos totalmente visíveis 
+e alterar a opacidade apenas da imagem de fundo sem atingir totalmente o body */
+body::before {
+  /* Content: ""  cria um conteúdo “vazio”, permitindo que o pseudo-elemento exista visualmente
+  no navegador. Sem essa linha, o ::before ou ::after nem aparece na tela. */
+  content: ""; 
+  position: absolute;
+  inset: 0; /* cobre toda a tela */
+  background-image: url('/image/fundo2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.67; /* aqui você define a transparência */
+  z-index: -1; /* mantém a imagem atrás do conteúdo */
+}
   
   main {
     flex: 1; /* ocupa o espaço disponível */
@@ -26,7 +44,7 @@
     border-radius: 12px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
   }
   
   .container h1 {
@@ -39,7 +57,7 @@
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     color: #38072c;
   }
   
